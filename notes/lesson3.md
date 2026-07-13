@@ -130,7 +130,7 @@ checkNumber(7); // "odd"
 ### Gợi ý
 
 ```ts
-type CheckNumber = (n: number) => string;
+function checkNumber = (n: number) => string;
 ```
 
 ---
