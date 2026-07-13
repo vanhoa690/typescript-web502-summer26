@@ -32,6 +32,13 @@ let students: { name: string; age: number; hasPet: boolean }[] = [
 
 let a: any = 10;
 a = "hello";
+a.toFixed(2);
+
+let c: unknown = 10;
+c = "hello";
+if (typeof c === "number") {
+  c.toFixed(2);
+}
 
 let b: number | string | boolean = 10; // unio type
 let status: "success" | "error" | "loading"; // 1 trong 3 gia tri
@@ -42,3 +49,5 @@ value = undefined;
 if (value != undefined || value != null) {
   console.log("value: " + value);
 }
+
+// Unknown
