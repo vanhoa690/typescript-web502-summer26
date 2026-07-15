@@ -53,3 +53,11 @@ type Employee = {
 };
 // &
 type EmployeeInfo = Employee & Person;
+
+// 5. Enum
+enum Role {
+  ADMIN = "Admin",
+  USER = "User",
+}
+
+console.log(Role.USER);
