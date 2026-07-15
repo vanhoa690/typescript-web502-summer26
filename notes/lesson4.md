@@ -1,16 +1,16 @@
 # TypeScript Cơ Bản: Class, Interface, Type & Generics
 
-> Tài liệu tổng hợp, rút gọn dành cho người mới học TypeScript.
-
----
-
 ## 1. Class
 
 Class dùng để tạo đối tượng gồm **thuộc tính** và **phương thức**.
 
 ```ts
 class Person {
-  constructor(public name: string, public age: number) {}
+  name: string;
+
+  constructor(public name: string) {
+    this.name = name;
+  }
 
   greet() {
     console.log(`Xin chào ${this.name}`);
@@ -156,7 +156,7 @@ type Status = "loading" | "success" | "error";
 Viết hàm:
 
 ```ts
-function logStatus(status: Status)
+function logStatus(status: Status);
 ```
 
 Hiển thị thông báo tương ứng.
@@ -168,7 +168,7 @@ Hiển thị thông báo tương ứng.
 Viết hàm Generic
 
 ```ts
-function identity<T>(value: T): T
+function identity<T>(value: T): T;
 ```
 
 Gọi thử với:
