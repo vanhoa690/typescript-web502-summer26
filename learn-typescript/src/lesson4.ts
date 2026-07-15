@@ -17,7 +17,7 @@ const s1 = new Student("hoadv");
 console.log(s1.name);
 s1.sayHello();
 
-// 2. Interface: Object
+// 2. Interface: Object, extends
 
 interface IStudent {
   name: string;
@@ -42,3 +42,14 @@ type Product = {
 type Status = "success" | "error";
 
 const statusSucess: Status = "success";
+
+// 4.Intersection type
+type Person = {
+  name: string;
+};
+
+type Employee = {
+  id: string;
+};
+// &
+type EmployeeInfo = Employee & Person;
