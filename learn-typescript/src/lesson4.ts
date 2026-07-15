@@ -61,3 +61,12 @@ enum Role {
 }
 
 console.log(Role.USER);
+
+// 6 Generic : <T>
+
+function showInfo<T>(data: T): T {
+  return data;
+}
+
+showInfo<number>(10);
+showInfo<string>("hoadv");
