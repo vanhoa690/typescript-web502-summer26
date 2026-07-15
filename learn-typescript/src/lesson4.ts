@@ -16,3 +16,29 @@ const s1 = new Student("hoadv");
 
 console.log(s1.name);
 s1.sayHello();
+
+// 2. Interface: Object
+
+interface IStudent {
+  name: string;
+  age: number;
+  isDone?: boolean;
+}
+
+const s2: IStudent = {
+  name: "hoadv",
+  age: 33,
+  isDone: true, // option
+};
+
+console.log(s2);
+
+// 3. Type Object / tap gia tri
+type Product = {
+  title: string;
+  price: number;
+};
+
+type Status = "success" | "error";
+
+const statusSucess: Status = "success";
