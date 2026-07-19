@@ -25,12 +25,12 @@ export default function ToDoList() {
       <h2>ToDoList</h2>
       {data.map((item: IToDoItem) => {
         return (
-          <div>
-            Item co ID: {item.id} va ten cong viec: {item.title}
-          </div>
+          // <div>
+          //   Item co ID: {item.id} va ten cong viec: {item.title}
+          // </div>
+          <ToDoItem id={item.id} title={item.title} />
         );
       })}
-      {/* <ToDoItem /> */}
     </div>
   );
 }
