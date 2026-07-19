@@ -43,13 +43,13 @@ function App() {
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB502</h1>
         <ToDoList />
         {/* click chu cuoi cung ctrl + space => import component */}
-        <div className="flex gap-2">
+        {/* <div className="flex gap-2">
           <Button
             bgColor="bg-red-600"
             onClick={() => alert("Click button")}
           ></Button>
           <Button label="Submit" onClick={handleClick}></Button>
-        </div>
+        </div> */}
       </div>
 
       <Toaster />
