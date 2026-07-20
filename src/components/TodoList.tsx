@@ -6,6 +6,8 @@ interface IToDoItem {
 }
 
 export default function ToDoList() {
+  // useState:  []
+  // useEffect : update state
   const data: IToDoItem[] = [
     {
       id: 1,

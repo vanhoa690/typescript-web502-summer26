@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // import Button from "./components/Button";
 // import ToDoList from "./components/TodoList";
 import MyState from "./components/MyState";
+import MyUseEffect from "./components/MyUseEffect";
 
 function App() {
   const handleClick = (): void => {
@@ -43,6 +44,7 @@ function App() {
       <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB502</h1>
         <MyState />
+        <MyUseEffect />
         {/* <ToDoList /> */}
       </div>
 
