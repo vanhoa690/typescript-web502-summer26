@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import ToDoItem from "./TodoItem";
+import axios from "axios";
 
 interface IToDoItem {
   id: number;
@@ -6,31 +8,26 @@ interface IToDoItem {
 }
 
 export default function ToDoList() {
-  // useState:  []
-  // useEffect : update state
-  const data: IToDoItem[] = [
-    {
-      id: 1,
-      title: "Di hoc",
-    },
-    {
-      id: 2,
-      title: "Di choi",
-    },
-    {
-      id: 3,
-      title: "Di lam",
-    },
-  ];
+  const [todos, setTodos] = useState<IToDoItem[]>([]);
+
+  useEffect(() => {
+    loadTodos();
+  }, []);
+
+  // const loadTodos = async () => {};
+  async function loadTodos() {
+    // axios / asycn await
+    const res = await axios.get("http://localhost:3000/todos");
+    setTodos(res.data);
+  }
   return (
     <div>
       <h2>ToDoList</h2>
-      {data.map((item: IToDoItem) => {
+      {todos.map((item: IToDoItem) => {
         return (
-          // <div>
-          //   Item co ID: {item.id} va ten cong viec: {item.title}
-          // </div>
-          <ToDoItem id={item.id} title={item.title} />
+          <div>
+            Item co ID: {item.id} va ten cong viec: {item.title}
+          </div>
         );
       })}
     </div>
