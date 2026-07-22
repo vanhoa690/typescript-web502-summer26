@@ -346,8 +346,6 @@ Hoàn thiện ứng dụng Todo List với các chức năng:
 
 - Hiển thị danh sách Todo
 - Xóa Todo
-- Thêm Todo mới
-- Đánh dấu Completed
 - Tìm kiếm Todo theo tên
 - Hiển thị số lượng Todo
 - Thêm Loading khi gọi API
