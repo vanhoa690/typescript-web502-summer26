@@ -17,8 +17,12 @@ export default function ToDoList() {
   // const loadTodos = async () => {};
   async function loadTodos() {
     // axios / asycn await
-    const res = await axios.get("http://localhost:3000/todos");
-    setTodos(res.data);
+    try {
+      const res = await axios.get("http://localhost:3000/todos");
+      setTodos(res.data);
+    } catch (error) {
+      alert("mesagge");
+    }
 
     // show error: try / catch
   }
