@@ -22,6 +22,11 @@ export default function ToDoList() {
 
     // show error: try / catch
   }
+
+  async function handleDelete(id: number) {
+    if (!confirm("Xoas hay ko")) return; // chon No thi dừng function
+    await axios.delete("http://localhost:3000/todos/" + id); //`http://localhost:3000/todos/${id}`
+  }
   return (
     <div>
       <h2>ToDoList</h2>
@@ -45,7 +50,7 @@ export default function ToDoList() {
                 <td>{item.title}</td>
                 <td></td>
                 <td>
-                  <button>Delete</button>
+                  <button onClick={() => handleDelete(item.id)}>Delete</button>
                 </td>
               </tr>
             );
