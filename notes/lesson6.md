@@ -386,7 +386,3 @@ Tại sao nên khai báo `interface Todo` trong TypeScript?
 Sau khi xóa dữ liệu, tại sao cần gọi lại `loadTodos()`?
 
 ---
-
-```
-
-```
