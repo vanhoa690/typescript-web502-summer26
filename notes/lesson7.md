@@ -145,8 +145,9 @@ export default function TodoForm() {
   const onSubmit = async (data: TodoFormData) => {
     try {
       await axios.post("http://localhost:3000/todos", data);
-    } catch (error) {
       alert("Thêm thành công");
+    } catch (error) {
+      alert("Lỗi");
     }
   };
 
