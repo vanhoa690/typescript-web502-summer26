@@ -1,19 +1,16 @@
 {
-  "todos": [
+  "movies": [
     {
       "id": 1,
-      "title": "Học React",
-      "completed": false
+      "title": "Avengers: Endgame",
+      "year": 2019,
+      "genre": "Action"
     },
     {
       "id": 2,
-      "title": "Học TypeScript",
-      "completed": true
-    },
-    {
-      "id": 3,
-      "title": "Làm bài tập",
-      "completed": false
+      "title": "Spider-Man",
+      "year": 2021,
+      "genre": "Action"
     }
   ]
 }
