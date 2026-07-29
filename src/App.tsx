@@ -1,8 +1,9 @@
 import { Toaster } from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import ToDoList from "./components/TodoList";
 import ListPage from "./components/List";
 import TodoForm from "./components/TodoForm";
+import TodoUpdate from "./components/TodoUpdate";
 
 function App() {
   return (
@@ -39,7 +40,11 @@ function App() {
       {/* MAIN CONTENT */}
       <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB502</h1>
-        <TodoForm />
+        <Routes>
+          <Route path="/list" element={<ToDoList />}></Route>
+          <Route path="/add" element={<TodoForm />}></Route>
+          <Route path="/update/:id" element={<TodoUpdate />}></Route>
+        </Routes>
       </div>
 
       <Toaster />

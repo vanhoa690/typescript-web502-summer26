@@ -7,11 +7,7 @@ interface FormData {
 }
 
 function TodoForm() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormData>();
+  const { register, handleSubmit } = useForm<FormData>();
 
   const submitForm = (data: FormData) => {
     console.log(data);
@@ -29,7 +25,7 @@ function TodoForm() {
             Title
           </label>
           <input
-            {...register("title", {})}
+            {...register("title")}
             type="text"
             id="text"
             className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
