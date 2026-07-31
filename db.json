@@ -1,11 +1,6 @@
 {
   "todos": [
     {
-      "id": 1,
-      "title": "Học React",
-      "completed": false
-    },
-    {
       "id": 2,
       "title": "Học TypeScript",
       "completed": true
@@ -16,14 +11,28 @@
       "completed": false
     },
     {
-      "title": "ten cong viec",
+      "title": "teen",
       "description": "mo ta cong viec",
+      "completed": false,
       "id": 4
     },
     {
-      "title": "ten còng vce",
+      "title": "ten",
       "description": "mo ta",
+      "completed": false,
       "id": 5
+    },
+    {
+      "title": "1",
+      "description": "3",
+      "completed": "true",
+      "id": 6
+    },
+    {
+      "title": "2",
+      "description": "4",
+      "completed": false,
+      "id": 7
     }
   ]
 }

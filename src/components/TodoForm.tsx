@@ -1,18 +1,21 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 interface FormData {
   title: string;
   description: string;
+  completed: boolean;
 }
 
 function TodoForm() {
   const { register, handleSubmit } = useForm<FormData>();
+  const nav = useNavigate();
 
   const submitForm = (data: FormData) => {
-    console.log(data);
     axios.post("http://localhost:3000/todos", data).then(() => {
       alert("Them thanh cong");
+      nav("/list");
     });
   };
 
@@ -34,11 +37,36 @@ function TodoForm() {
         </div>
         <div>
           <label htmlFor="text" className="block font-medium mb-1">
-            Mo ta
+            Description
           </label>
           <input
             {...register("description")}
             type="text"
+            id="text"
+            className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          {/* errors */}
+        </div>
+        <div>
+          <label htmlFor="text" className="block font-medium mb-1">
+            Description
+          </label>
+          <input
+            {...register("description")}
+            type="text"
+            id="text"
+            className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          {/* errors */}
+        </div>
+        <div>
+          <label htmlFor="text" className="block font-medium mb-1">
+            Trang thai
+          </label>
+
+          <input
+            {...register("completed")}
+            type="checkbox"
             id="text"
             className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />

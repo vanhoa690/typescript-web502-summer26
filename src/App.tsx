@@ -1,7 +1,6 @@
 import { Toaster } from "react-hot-toast";
 import { Link, Route, Routes } from "react-router-dom";
 import ToDoList from "./components/TodoList";
-import ListPage from "./components/List";
 import TodoForm from "./components/TodoForm";
 import TodoUpdate from "./components/TodoUpdate";
 
