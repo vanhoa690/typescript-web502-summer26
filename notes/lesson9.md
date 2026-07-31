@@ -1,4 +1,4 @@
-# Lesson 10 - Đăng ký tài khoản (Register) với React Hook Form + TypeScript
+# Lesson 9 - Đăng ký tài khoản (Register) với React Hook Form + TypeScript
 
 ## API Register : /register
 
